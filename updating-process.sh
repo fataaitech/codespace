@@ -85,9 +85,10 @@ gbp buildpackage
 sbuild
 
 #Prepare to push
-dch -r -D experimental
+dch -r -D experimental 
 
 git remote -v
+git remote set-url origin git@salsa.debian.org:mr.winz/node-config.git
 git push -u --all --follow-tags
 
 override_dh_lintian:
