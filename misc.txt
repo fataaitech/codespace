@@ -1,0 +1,7 @@
+sudo nano /var/lib/dpkg/statoverride
+
+sudo usermod -aG sudo codespace
+
+sudo visudo -f /srv/chroot/debian-sid/etc/sudoers
+
+codespace ALL=(ALL) NOPASSWD: ALL
