@@ -16,14 +16,14 @@ read -p "Enter your GPG key ID: " key
 
 git config --global user.signingkey $key
 
-git config --global commit.gpgsign true
+git config --global commit.gpgsign true 
 
 gpg --export -a $key > gnupg-key.asc
 
 echo ""
 echo ""
 
-cat gnupg-key.asc | tee -a uploadable-keys.txt
+cat gnupg-key.asc | tee uploadable-keys.txt
 echo -e "\n\n" | tee -a uploadable-keys.txt
 
 echo ""

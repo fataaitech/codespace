@@ -25,4 +25,4 @@ EOF
 #Delete chroot
 #sudo rm -r /srv/chroot/unstable-amd64-sbuild/
 #sudo rm /etc/schroot/chroot.d/unstable-amd64-sbuild-* /etc/sbuild/chroot/unstable-amd64-sbuild
-./5_create-chroot-unstable.sh
+./5_sbuild-unstable.sh

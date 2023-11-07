@@ -44,7 +44,7 @@ gbp dch -a
 ########################################################################
 
 #Install build dependency 
-sudo apt build-dep node-yaml
+sudo apt build-dep node-config
 
 #Now we build. Run:
 dpkg-buildpackage

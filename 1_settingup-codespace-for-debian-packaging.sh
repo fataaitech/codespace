@@ -24,7 +24,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F8D2585B8783D481
 
 #Update package manager
 sudo apt-get update
-#sudo apt-get upgrade
+sudo apt-get upgrade 
 
 
 #Install micro text editor and recommedation
