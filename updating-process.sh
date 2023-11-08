@@ -14,7 +14,7 @@ alias clean='fakeroot debian/rules clean'
 
 
 #First fork and clone the salsa repo using git-buildpackage i.e gbp:
-gbp clone --pristine-tar git@salsa.debian.org:js-team/node-config.git 
+gbp clone --pristine-tar git@salsa.debian.org:mr.winz/node-config.git 
 
 #Next cd into the directory and download the new upstream release tarball using the command:
 cd node-config
@@ -90,6 +90,3 @@ dch -r -D experimental
 git remote -v
 git remote set-url origin git@salsa.debian.org:mr.winz/node-config.git
 git push -u --all --follow-tags
-
-override_dh_lintian:
-    dh_lintian --fail-on-warnings -X embedded-javascript-library
