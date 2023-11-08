@@ -8,7 +8,7 @@ deb http://security.debian.org/debian-security/ bookworm-security main
 deb-src http://deb.debian.org/debian/ bookworm main
 deb-src http://security.debian.org/debian-security/ bookworm-security main
 deb http://ftp.debian.org/debian stable-updates main
-deb http://archive.ubuntu.com/ubuntu bullseye-updates main
+#deb http://archive.ubuntu.com/ubuntu bullseye-updates main
 EOF
 
 #Update package manager

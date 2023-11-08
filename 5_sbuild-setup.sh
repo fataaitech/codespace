@@ -5,7 +5,7 @@ cp -a ./.sbuildrc ~/
 sudo sbuild-adduser codespace
 sudo ln -sf ~/.sbuildrc /root/.sbuildrc
 
-sudo sbuild-createchroot --no-merged-usr --make-sbuild-tarball --force-unmerged-chroot --include=eatmydata unstable /srv/chroot/unstable-amd64-sbuild http://ftp.us.debian.org/debian
+sudo sbuild-createchroot --include=eatmydata,ccache unstable /srv/chroot/unstable-amd64-sbuild http://ftp.us.debian.org/debian
 sudo sbuild-update -udcar u
 schroot -l | grep sbuild
 
