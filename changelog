@@ -1,4 +1,4 @@
-node-config (3.3.9-2) UNRELEASED; urgency=medium
+node-config (3.3.9-2) unstable; urgency=medium
 
   * Team upload
   * Lintian override removed: mismatched override warning

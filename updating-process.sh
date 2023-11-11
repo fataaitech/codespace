@@ -88,5 +88,5 @@ sbuild
 dch -r -D experimental 
 
 git remote -v
-git remote set-url origin git@salsa.debian.org:mr.winz/node-config.git
+git remote set-url origin git@salsa.debian.org:mr.winz/node-config.git 
 git push -u --all --follow-tags
