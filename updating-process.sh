@@ -14,7 +14,13 @@ alias clean='fakeroot debian/rules clean'
 
 
 #First fork and clone the salsa repo using git-buildpackage i.e gbp:
-gbp clone --pristine-tar git@salsa.debian.org:mr.winz/node-config.git 
+gbp clone --pristine-tar git@salsa.debian.org:js-team/node-npmr.git 
+
+#Using git to clone instead of gbp
+git clone git@salsa.debian.org:js-team/node-config.git 
+git checkout upstream 
+git checkout pristine-tar 
+git checkout master 
 
 #Next cd into the directory and download the new upstream release tarball using the command:
 cd node-config
@@ -44,7 +50,7 @@ gbp dch -a
 ########################################################################
 
 #Install build dependency 
-sudo apt build-dep node-config
+sudo apt build-dep node-config 
 
 #Now we build. Run:
 dpkg-buildpackage
@@ -90,3 +96,10 @@ dch -r -D experimental
 git remote -v
 git remote set-url origin git@salsa.debian.org:mr.winz/node-config.git 
 git push -u --all --follow-tags
+
+#Create merge request for forwarding patches to upstream
+https://salsa.debian.org/mr.winz/node-terser/-/merge_requests/new?merge_request%5Bsource_branch%5D=upstream%2Flatest
+https://salsa.debian.org/mr.winz/node-yaml/-/merge_requests/new?merge_request%5Bsource_branch%5D=upstream
+
+#Create merge request for patches for 
+#https://salsa.debian.org/mr.winz/node-terser/-/merge_requests/new?merge_request%5Bsource_branch%5D=pristine-tar
